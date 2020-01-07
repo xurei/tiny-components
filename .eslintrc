@@ -1,0 +1,36 @@
+{
+	"extends": "xurei/react",
+	"parser": "babel-eslint",
+
+	"plugins": [
+		"promise",
+		"jsx",
+		"react",
+		"security"
+	],
+	"env": {
+		"es6": true
+	},
+	"parserOptions": {
+		"ecmaVersion": 2017,
+		"sourceType": "module",
+		"ecmaFeatures": {
+			"experimentalObjectRestSpread": true,
+			"jsx": true
+		}
+	},
+	"rules": {
+		"no-alert": "warn",
+		"no-eval": "error",
+		"no-const-assign": "error",
+		"semi": "warn",
+		"prefer-const": "warn",
+		"no-unused-vars": "warn",
+		"strict": "error",
+		"eqeqeq": "warn",
+		"curly": "warn",
+		"quotes": ["warn", "single"],
+
+		"security/detect-pseudoRandomBytes": "error"
+	}
+}
