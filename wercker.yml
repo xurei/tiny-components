@@ -1,0 +1,23 @@
+box: node:12.14.1
+build:
+  steps:
+
+    - script:
+        name: echo nodejs information
+        code: |
+          echo "node version $(node -v) running"
+          echo "npm version $(npm -v) running"
+
+    - mvandervliet/npm-ci
+
+    - script:
+          name: Build
+          code: |
+            npm run build
+
+    # - npm-test
+
+    # - script:
+    #     name: Code coverage
+    #     code: |
+    #       npm run coverage

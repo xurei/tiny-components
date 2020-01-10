@@ -4,24 +4,24 @@ const ieVersion = getIEVersion();
 const isIE9 = 0 < ieVersion && ieVersion <= 9;
 
 const commonStyle = {
-	position: 'absolute', width: '100%', height: '100%', left: 0, top: 0,
+    position: 'absolute', width: '100%', height: '100%', left: 0, top: 0,
 };
 const parentStyle = Object.assign({}, commonStyle, isIE9 ? {
-	display: 'table',
+    display: 'table',
 } : {
-	display: 'flex', alignItems: 'center',
+    display: 'flex', alignItems: 'center',
 });
 
 const childStyle = isIE9 ? {
-	display: 'table-cell', verticalAlign: 'middle',
+    display: 'table-cell', verticalAlign: 'middle',
 } : null;
 
 export function VCenter(props) {
-	return (
-		<div style={parentStyle}>
-			<div style={childStyle}>
-				{props.children}
-			</div>
-		</div>
-	);
+    return (
+        <div style={parentStyle}>
+            <div style={childStyle}>
+                {props.children} sdfsfsdf
+            </div>
+        </div>
+    );
 }
