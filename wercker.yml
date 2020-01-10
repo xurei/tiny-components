@@ -14,10 +14,16 @@ build:
           name: Build
           code: |
             npm run build
+publish:
+  steps:
+    - mvandervliet/npm-ci
 
-    # - npm-test
+    - script:
+          name: Build
+          code: |
+            npm run build
 
-    # - script:
-    #     name: Code coverage
-    #     code: |
-    #       npm run coverage
+    - script:
+          name: Build
+          code: |
+            npm publish
