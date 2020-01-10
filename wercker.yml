@@ -30,4 +30,4 @@ publish:
     - script:
           name: npm publish
           code: |
-            npm publish
+            npm publish --access public
