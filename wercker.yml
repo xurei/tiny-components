@@ -17,6 +17,11 @@ publish:
   steps:
     - mvandervliet/npm-ci
 
+    - script
+          name: npm auth
+          code: |
+            echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ./.npmrc
+
     - script:
           name: npm run build
           code: |
