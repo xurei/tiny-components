@@ -10,7 +10,7 @@ build:
     - mvandervliet/npm-ci
 
     - script:
-          name: Build
+          name: npm run build
           code: |
             npm run build
 publish:
@@ -18,11 +18,11 @@ publish:
     - mvandervliet/npm-ci
 
     - script:
-          name: Build
+          name: npm run build
           code: |
             npm run build
 
     - script:
-          name: Build
+          name: npm publish
           code: |
             npm publish
