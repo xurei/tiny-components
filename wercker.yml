@@ -1,7 +1,6 @@
 box: node:12.14.1
 build:
   steps:
-
     - script:
         name: echo nodejs information
         code: |
